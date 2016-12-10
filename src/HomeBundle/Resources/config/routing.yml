@@ -3,3 +3,7 @@ home_homepage:
     defaults: { _controller: HomeBundle:Default:index }
     options:
         expose: true
+
+map_page:
+    path: /map
+    defaults: { _controller: HomeBundle:Default:map }

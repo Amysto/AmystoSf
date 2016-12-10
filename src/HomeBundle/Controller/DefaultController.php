@@ -14,4 +14,10 @@ class DefaultController extends Controller
         return $this->render('HomeBundle:Default:index.html.twig',array());
     }
 
+    public function mapAction(Request $request)
+        {
+            return $this->render('HomeBundle:Default:map.html.twig', array());
+            //return 'Hello !';
+        }
+
 }

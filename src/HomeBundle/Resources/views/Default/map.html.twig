@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <script type="text/javascript" src="{{ asset('assets/src/js/map.js') }}"></script>
+{% endblock %}
+
+
+{% block javascripts %}
+
+{% endblock %}
