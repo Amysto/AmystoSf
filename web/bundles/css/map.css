@@ -1,5 +1,6 @@
- .my_polyline { 
- stroke: blue;
+.my_polyline { 
+ stroke: green;
   fill: none;
-    stroke-width: 1;
+  stroke-dasharray: 0,0; 
+  stroke-width: 2;
 }
