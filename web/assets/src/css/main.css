@@ -1,0 +1,1653 @@
+/*
+ * Variables
+ */
+/*
+ * Imports
+ */
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+
+.my_polyline { 
+ stroke: green;
+  fill: none;
+  stroke-dasharray: 10,10; 
+  stroke-width: 2;
+}
+
+
+
+
+
+nav.navbar-inverse,
+.menuS .navbar-inverse {
+  background-color: #999999;
+  border-color: #999999;
+}
+nav.navbar-inverse.navbar-fixed-top,
+.menuS .navbar-inverse.navbar-fixed-top {
+  border: 0;
+}
+nav.navbar-inverse .container-fluid .navbar-header a,
+.menuS .navbar-inverse .container-fluid .navbar-header a {
+  color: white;
+}
+nav.navbar-inverse .container-fluid .navbar-header a:hover,
+.menuS .navbar-inverse .container-fluid .navbar-header a:hover {
+  background-color: #A5A4A4;
+}
+nav.navbar-inverse .container-fluid ul.navbar-nav li.active a,
+.menuS .navbar-inverse .container-fluid ul.navbar-nav li.active a,
+nav.navbar-inverse .container-fluid ul.navbar-nav li.active a:hover,
+.menuS .navbar-inverse .container-fluid ul.navbar-nav li.active a:hover {
+  background-color: #77C8D6;
+}
+nav.navbar-inverse .container-fluid ul.navbar-nav li a,
+.menuS .navbar-inverse .container-fluid ul.navbar-nav li a {
+  color: white;
+}
+nav.navbar-inverse .container-fluid ul.navbar-nav li a:hover,
+.menuS .navbar-inverse .container-fluid ul.navbar-nav li a:hover {
+  background-color: #A5A4A4;
+}
+/*
+ * Sidebar
+ */
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 992px) {
+  .sidebar {
+    top: 18px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    border-right: 1px solid #eee;
+    transition: 0.8s;
+    padding: 0 0 20px 20px !important;
+    overflow: visible;
+  }
+  .sidebar ul.nav-sidebar.returnHome {
+    margin-top: 20px;
+  }
+  .sidebar ul.nav-sidebar.returnHome .glyphicon-home {
+    margin-left: 2px;
+    margin-right: 10px;
+  }
+  .sidebar ul.nav-sidebar legend {
+    color: #61B2BF;
+    border-bottom-color: #61B2BF;
+  }
+  .sidebar ul.nav-sidebar li a {
+    color: #545454;
+  }
+  .sidebar ul.nav-sidebar li a:hover,
+  .sidebar ul.nav-sidebar li a:focus {
+    color: white;
+  }
+  .closed {
+    left: -22%;
+  }
+  .closed legend {
+    border-bottom: none;
+  }
+  .closed #ecSearchBarSidebar,
+  .closed #ecSearchBarMain,
+  .closed #appSearchBarSidebar {
+    visibility: hidden;
+  }
+  .toggle-sidebar {
+    height: auto;
+  }
+  .toggle-sidebar:hover {
+    color: white;
+    font-size: 12pt;
+    cursor: context-menu;
+  }
+}
+@media (min-width: 1024px) {
+  .closed {
+    left: -15%;
+  }
+}
+/* Sidebar navigation */
+ul.nav-sidebar {
+  margin-right: -21px;
+  /* 20px padding + 1px border */
+  margin-top: 10px;
+  margin-left: -10px;
+  width: 100%;
+}
+ul.nav-sidebar legend {
+  color: #999999;
+  border-bottom-color: #999999;
+  padding-left: 5px;
+}
+ul.nav-sidebar li a {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+ul.nav-sidebar li a .menuImportant {
+  font-weight: bold;
+  font-size: 12pt;
+}
+ul.nav-sidebar li a:hover,
+ul.nav-sidebar li a:focus {
+  background-color: #81CFDB;
+}
+ul.nav-sidebar li.active a,
+ul.nav-sidebar li.active a:hover,
+ul.nav-sidebar li.active a:focus {
+  color: white;
+  background-color: #A4E2E8;
+}
+ul.nav-sidebar .searchBarre {
+  margin-left: 4%;
+}
+.menuM {
+  display: none;
+}
+.menuS .navbar .container {
+  width: 100%;
+}
+.menuS .navbar .container .glyphicon {
+  font-size: 26px;
+  color: white;
+  top: 5px;
+  cursor: pointer;
+}
+.menuS #linksMenuS {
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  min-height: 100%;
+  padding-top: 10px;
+  z-index: 1020;
+}
+.menuS #linksMenuS .close {
+  margin-right: 10px;
+}
+.menuS #linksMenuS .close span {
+  color: black;
+}
+.menuS #linksMenuS .container {
+  padding-top: 50px;
+}
+.menuS #linksMenuS .container #appSearchBarSidebar {
+  margin-top: 60px;
+}
+.menuS #linksMenuS .container .menuImportant {
+  font-weight: bold;
+  font-size: 12pt;
+}
+@media (min-width: 992px) {
+  nav.menuM {
+    display: block;
+  }
+  nav.menuM.navbar-inverse.navbar-fixed-top {
+    border-bottom: 5px solid #77C8D6;
+  }
+  .menuS {
+    display: none;
+  }
+}
+.login-page {
+  text-align: center;
+  margin-top: 5%;
+}
+.login-page form {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.login-page form input:not(.btn),
+.login-page form select {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #77C8D6;
+}
+.login-page form .required:after {
+  content: "*";
+}
+.fos_user_change_password {
+  text-align: center;
+}
+.fos_user_change_password div {
+  margin-bottom: 10px;
+}
+.userInfos .panel.panel-default,
+.societeInfos .panel.panel-default {
+  border-color: #999999;
+}
+.userInfos .panel.panel-default .panel-heading,
+.societeInfos .panel.panel-default .panel-heading {
+  background-color: #999999;
+  color: white;
+}
+.userInfos .panel.panel-default .panel-heading h3,
+.societeInfos .panel.panel-default .panel-heading h3 {
+  font-weight: bold;
+}
+.userInfos .panel.panel-default .panel-body p span.glyphicon-print,
+.societeInfos .panel.panel-default .panel-body p span.glyphicon-print {
+  margin-left: 10px;
+}
+.editProfile .panel.panel-default {
+  border-color: #999999;
+}
+.editProfile .panel.panel-default .panel-heading {
+  background-color: #999999;
+  color: white;
+}
+.editProfile .panel.panel-default .panel-heading h3 {
+  font-weight: bold;
+}
+.fos_user_resetting_request div {
+  margin-bottom: 10px;
+}
+.fos_user_resetting_reset div {
+  margin-bottom: 10px;
+}
+.main .requestAccountForm div {
+  margin-bottom: 5px;
+}
+.main .requestAccountForm div textarea {
+  height: 150px;
+  min-width: 100%;
+  max-width: 100%;
+}
+/**** Base ****/
+#appSearchBarSidebar input {
+  font-size: 10pt;
+}
+/**** Menu ****/
+#addCategorieModal .modal-body,
+#addProduitModal .modal-body,
+#addCategorieModal .modal-footer,
+#addProduitModal .modal-footer {
+  text-align: center;
+}
+#addCategorieModal .modal-body input,
+#addProduitModal .modal-body input,
+#addCategorieModal .modal-body select,
+#addProduitModal .modal-body select {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/**** Homepage ****/
+#produitsTable {
+  border: none;
+}
+#produitsTable.table-responsive {
+  -ms-overflow-style: scrollbar;
+}
+#produitsTable table {
+  text-align: center;
+  margin: 1px;
+  width: 99%;
+}
+#produitsTable table .categorieGroup {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+}
+#produitsTable table thead tr:nth-child(2) {
+  border-left: 1px solid #ddd;
+}
+#produitsTable table thead tr th {
+  text-align: center;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#produitsTable table thead tr td:first-child,
+#produitsTable table thead tr th:first-child {
+  display: none;
+}
+#produitsTable table tbody tr td {
+  border: 1px solid #ddd;
+}
+#produitsTable table tbody tr td select {
+  width: 100%;
+}
+#produitsTable table tbody tr td:last-child {
+  border-right: 1px solid #ddd;
+}
+#produitsTable table tbody tr td:first-child {
+  display: none;
+}
+#produitsTable table tbody tr td:nth-child(2) {
+  border-left: 1px solid #ddd;
+}
+#produitsTable table tfoot {
+  display: none;
+}
+#listeProduits #produitsTable td:last-child,
+#listeProduits #produitsTable th:last-child {
+  display: none;
+}
+#listeProduits,
+#listeProduitsArchives {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .main #listeProduits #produitsTable td:last-child,
+  .main #listeProduits #produitsTable th:last-child {
+    display: table-cell;
+  }
+  .main #produitsTable {
+    overflow-x: hidden;
+  }
+  .main #produitsTable tr td:first-child,
+  .main #produitsTable tr th:first-child {
+    display: table-cell;
+    border-left: 1px solid #ddd;
+  }
+  .main #produitsTable tr td:nth-child(2) {
+    border-left: 1px solid #ddd;
+  }
+  .main #produitsTable tr td:last-child {
+    border-right: 1px solid #ddd;
+  }
+  .main #produitsTable thead tr:nth-child(2) {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+  .main #produitsTable thead tr:nth-child(2) th:last-child {
+    border-right: 1px solid #ddd;
+  }
+  .main #produitsTable thead td:first-child {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  .main #produitsTable tfoot {
+    display: table-footer-group;
+  }
+  .main #produitsTable tfoot td {
+    border-bottom: 1px solid #ddd;
+  }
+}
+.triM {
+  display: none;
+}
+@media (min-width: 992px) {
+  .triM {
+    display: block;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    text-align: center;
+  }
+  .triS {
+    display: none;
+  }
+}
+.actions {
+  margin-bottom: 1%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.listeCategories .input-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchWord {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1%;
+  margin-top: 20px;
+}
+.noResults {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+.triColonne:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.paginationL {
+  display: none;
+}
+@media (min-width: 992px) {
+  .paginationL {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .paginationS {
+    display: none;
+  }
+}
+/**** Résultats ****/
+.main .modals #comModal textarea {
+  min-height: 100px;
+}
+.main .modals #addColumnModal table tbody td:not(:first-of-type),
+.main .modals #updateColumnModal table tbody td:not(:first-of-type) {
+  text-align: center;
+}
+.main div.actionsResultats {
+  display: none;
+  margin-bottom: 1%;
+  padding-left: 1%;
+  text-align: center;
+}
+.main .table-responsive {
+  border: none;
+}
+.main .table-responsive table.resultats {
+  border: none;
+  margin-left: 475px;
+  width: 60%;
+}
+.main .table-responsive table.resultats tbody tr td,
+.main .table-responsive table.resultats tbody tr th {
+  margin: 0;
+  padding: 4px;
+  height: 30px;
+  vertical-align: middle;
+}
+.main .table-responsive table.resultats tbody tr td.fixed,
+.main .table-responsive table.resultats tbody tr th.fixed {
+  position: absolute;
+  width: 160px;
+  left: 0;
+  top: auto;
+  margin-top: -1px;
+  padding: 4px;
+  z-index: 500;
+}
+.main .table-responsive table.resultats tbody tr td.fixed2,
+.main .table-responsive table.resultats tbody tr th.fixed2,
+.main .table-responsive table.resultats tbody tr td.fixed3,
+.main .table-responsive table.resultats tbody tr th.fixed3,
+.main .table-responsive table.resultats tbody tr td.fixed4,
+.main .table-responsive table.resultats tbody tr th.fixed4,
+.main .table-responsive table.resultats tbody tr td.fixed5,
+.main .table-responsive table.resultats tbody tr th.fixed5 {
+  position: absolute;
+  top: auto;
+  margin-top: -1px;
+  padding: 4px;
+  z-index: 500;
+  width: 80px;
+}
+.main .table-responsive table.resultats tbody tr td.fixed2,
+.main .table-responsive table.resultats tbody tr th.fixed2 {
+  left: 170px;
+}
+.main .table-responsive table.resultats tbody tr td.fixed3,
+.main .table-responsive table.resultats tbody tr th.fixed3 {
+  left: 250px;
+}
+.main .table-responsive table.resultats tbody tr td.fixed4,
+.main .table-responsive table.resultats tbody tr th.fixed4 {
+  left: 330px;
+}
+.main .table-responsive table.resultats tbody tr td.fixed5,
+.main .table-responsive table.resultats tbody tr th.fixed5 {
+  left: 410px;
+}
+.main .table-responsive table.resultats tbody tr.actions {
+  visibility: hidden;
+}
+.main .table-responsive table.resultats tbody tr.actions td:first-child {
+  border: none;
+  background-color: white;
+}
+.main .table-responsive table.resultats tbody tr.actions td {
+  border: none;
+}
+.main .table-responsive table.resultats tbody tr.actions td.fixed {
+  background-color: white;
+  border-color: white;
+}
+.main .table-responsive table.resultats tbody tr.actions th.fixedDesc {
+  text-align: right;
+  padding-right: 10px;
+  left: 330px;
+  position: absolute;
+  top: auto;
+  margin-top: -1px;
+  z-index: 500;
+  width: 160px;
+  background-color: white;
+  border-color: white;
+}
+.main .table-responsive table.resultats tbody tr.actions th.fixed {
+  background-color: white;
+  border-color: white;
+}
+.main .table-responsive table.resultats tbody tr.descriptionTest th.fixedDesc {
+  text-align: right;
+  padding-right: 10px;
+  left: 330px;
+  position: absolute;
+  top: auto;
+  margin-top: -1px;
+  z-index: 500;
+  width: 160px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main .table-responsive table.resultats tbody tr.descriptionTest th.fixed {
+  background-color: white;
+  border-color: white;
+}
+.main .table-responsive table.resultats tbody tr td {
+  text-align: center;
+  border: 1px solid white;
+  font-size: 8pt;
+  min-width: 80px;
+}
+.main .table-responsive table.resultats tbody tr td.editable {
+  cursor: context-menu;
+}
+.main .table-responsive table.resultats tbody tr td .tolerance {
+  color: red;
+}
+.main .table-responsive table.resultats tbody tr td .exclu {
+  color: grey;
+  font-style: italic;
+}
+.main .table-responsive table.resultats tbody tr td.fixed:nth-child(odd):not(:first-child) {
+  background-color: #F2F2F2;
+}
+.main .table-responsive table.resultats tbody tr td:not(.fixed):nth-child(even) {
+  background-color: #F2F2F2;
+}
+.main .table-responsive table.resultats tbody tr td:not(.fixed):nth-child(odd) {
+  background-color: white;
+  border-bottom: 1px solid #F2F2F2;
+  border-top: 1px solid #F2F2F2;
+}
+.main .table-responsive table.resultats tbody tr th {
+  border: 1px solid white;
+}
+.main .table-responsive table.resultats tbody tr th.separator {
+  background-color: white;
+  border: 1px solid white;
+}
+.main .table-responsive table.resultats tbody tr th.head {
+  font-weight: bold;
+  background-color: #C4C4C4;
+  font-size: 10pt;
+}
+.main #editValueModal .modal-body,
+.main #editValueModal .modal-footer {
+  text-align: center;
+}
+.main .no-tests {
+  text-align: center;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .main div.actionsResultats {
+    display: block;
+  }
+  .main .table-responsive table.resultats tbody tr.actions {
+    visibility: visible;
+  }
+  .main .table-responsive table.resultats tbody tr.actions td {
+    border: 1px solid white;
+  }
+}
+@media (min-width: 992px) {
+  .main .table-responsive table.resultats {
+    margin-left: 455px;
+  }
+}
+@media (max-width: 767px) {
+  .main .analysesTable input {
+    min-width: 80px;
+  }
+  .main .gestionAnalyses input {
+    float: left;
+    width: 80%;
+    margin-right: 5px;
+  }
+}
+/**** Tolérances ****/
+#listeAnalysesTolerance {
+  display: none;
+}
+.rightSide #toleranceSearchBar {
+  margin-bottom: 20px;
+}
+.rightSide #gestionToleranceAnalyse {
+  text-align: center;
+  margin-top: 20px;
+}
+.rightSide #gestionToleranceAnalyse table {
+  margin-top: 30px;
+}
+.rightSide #gestionToleranceAnalyse table td,
+.rightSide #gestionToleranceAnalyse table th {
+  border: 1px solid #ddd;
+}
+.rightSide #gestionToleranceAnalyse table thead th {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+.rightSide #gestionToleranceAnalyse table tbody td.signification {
+  width: 40%;
+}
+.rightSide #gestionToleranceAnalyse table tbody td.signification span:not(.gras) {
+  color: red;
+}
+.rightSide #gestionToleranceAnalyse table tbody td.signification span.gras {
+  font-style: italic;
+}
+.rightSide #gestionToleranceAnalyse table tfoot tr td.empty {
+  background: transparent;
+  border: none;
+}
+.rightSide #gestionToleranceAnalyse div .glyphicon-ok {
+  display: none;
+  color: green;
+}
+@media (min-width: 992px) {
+  #listeAnalysesTolerance {
+    display: inline-block;
+  }
+  .rightSide {
+    position: fixed;
+    right: 0;
+    margin-right: 20px;
+    width: 60%;
+    top: 150px;
+  }
+}
+/**** Archive ****/
+.main #listeArchives table {
+  text-align: center;
+}
+.main #listeArchives table thead th {
+  text-align: center;
+}
+.main #listeArchives table tbody td {
+  color: #7C7C7C;
+}
+/**** Autre ****/
+ul.dropdown-menu li:hover {
+  cursor: context-menu;
+}
+ul.dropdown-menu li a {
+  color: black;
+}
+/**** Homepage ****/
+/**** Gestion des informations ****/
+.main .page-header #saveInfos {
+  margin-left: 20px;
+}
+.main #listeInfosAnalyses table thead th {
+  text-align: center;
+}
+.main #commentaires textarea {
+  min-height: 150px;
+}
+#ecSearchBarSidebar {
+  width: 90%;
+}
+#ecSearchBarSidebar input {
+  font-size: 10pt;
+}
+.ecSearchForm {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.ecSearchForm #ecSearchBarMain {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/**** Homepage ****/
+.main #DAModal .modal-dialog .modal-body table.table-center td,
+.main #DAModal .modal-dialog .modal-body table.table-center th {
+  text-align: center;
+}
+.main #DAModal .modal-dialog .modal-body table tr td,
+.main #DAModal .modal-dialog .modal-body table tr th {
+  vertical-align: middle;
+}
+.main #DAModal .modal-dialog .modal-body table tr td:first-of-type,
+.main #DAModal .modal-dialog .modal-body table tr th:first-of-type {
+  min-width: 230px;
+}
+.main #DAModal .modal-dialog .modal-body table tr p {
+  font-size: 9pt;
+  margin-bottom: 0;
+}
+.main #DAModal .modal-dialog .modal-body table tr p label {
+  font-size: 9pt;
+  margin-bottom: 0;
+}
+.main #DAModal .modal-dialog .modal-footer div {
+  margin-bottom: 10px;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.avertissement {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.recapResultats legend {
+  color: #61B2BF;
+  border-color: #61B2BF;
+  border-width: 2px;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.recapResultats table {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.recapResultats table tr td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.recapResultats table tr td:first-of-type {
+  width: 60%;
+}
+.main #resultatsEchModal .modal-dialog .modal-body div.recapResultats table tr td:nth-child(2) {
+  text-align: center;
+}
+.main #resultatsEchModal .modal-dialog .modal-footer {
+  text-align: left;
+}
+.main ul.listeDemandes {
+  padding-left: 10px;
+}
+.main ul.listeDemandes li {
+  color: #1A9EB2;
+  font-size: 120%;
+}
+.main ul.listeDemandes li.collapsed {
+  color: black;
+}
+.main ul.listeDemandes div.collapse ul,
+.main ul.listeDemandes div.collapsing ul {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.main ul.listeDemandes div.collapse ul li,
+.main ul.listeDemandes div.collapsing ul li {
+  font-weight: normal;
+  font-size: 100%;
+  list-style: none;
+  color: #999999;
+  font-style: italic;
+}
+.main ul.listeDemandes div.collapse ul li a,
+.main ul.listeDemandes div.collapsing ul li a {
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+}
+.main .rightSidebar legend {
+  color: #61B2BF;
+  border-bottom-color: #61B2BF;
+}
+.main .rightSidebar .infosHome {
+  padding: 2%;
+  margin-bottom: 2%;
+}
+.main .rightSidebar .infosHome:nth-of-type(2) {
+  border-top: 1px solid #ddd;
+}
+.main .rightSidebar .infosHome .gras {
+  font-weight: bold;
+}
+.main .rightSidebar .infosHome a {
+  color: #31708f;
+  text-decoration: underline;
+}
+.main .rightSidebar .infosHome a:hover {
+  color: #77C8D6;
+}
+.main .rightSidebar .infosHome li {
+  list-style-type: circle;
+}
+@media (min-width: 1200px) {
+  .main #DAModal .modal-dialog {
+    width: 60%;
+  }
+  .main .rightSidebar {
+    border-left: 1px solid #ddd;
+  }
+}
+/**** Search page ****/
+.main .searchPage legend {
+  margin-top: 30px;
+}
+.main .searchPage ul li {
+  cursor: context-menu;
+  margin-bottom: 10px;
+  list-style: none;
+}
+/**** Demande d'analyse ****/
+.main .DAPage .reference {
+  margin-top: 30px;
+}
+.main .DAPage .reference .form-group {
+  margin-left: 10%;
+}
+.main .DAPage .reference .input-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .DAPage .reference .text-danger {
+  display: none;
+}
+.main .DAPage .echantillons {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.main .DAPage .echantillons table {
+  border-bottom: 1px solid #ddd;
+}
+.main .DAPage .echantillons table thead th {
+  text-align: left;
+}
+.main .DAPage .echantillons table thead th:last-of-type {
+  min-width: 100px;
+}
+.main .DAPage .echantillons table tbody tr:hover {
+  cursor: pointer;
+}
+.main .DAPage .echantillons table tbody tr td {
+  vertical-align: middle;
+}
+.main .DAPage .echantillons table tbody tr td p {
+  margin: 2px 0;
+}
+.main .DAPage .echantillons table tbody tr td:last-of-type {
+  text-align: center;
+}
+.main .DAPage .destinatairesDA {
+  margin-top: 40px;
+  padding-top: 40px;
+  background-color: #F9F9F9;
+  padding-bottom: 20px;
+}
+.main .DAPage .destinatairesDA .input-group {
+  margin-bottom: 20px;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main .DAPage .destinatairesDA table thead tr th:first-of-type {
+  text-align: left;
+}
+.main .DAPage .destinatairesDA table tbody td:not(:first-of-type) {
+  text-align: center;
+}
+.main .DAPage footer.buttonsDA {
+  margin-top: 10px;
+  padding-top: 20px;
+}
+.main .DAPage footer.buttonsDA .btn {
+  background-color: transparent;
+}
+.main .DAPage footer.buttonsDA .btn-info {
+  color: #5bc0de;
+}
+.main .DAPage footer.buttonsDA .btn-info:hover {
+  color: #269abc;
+}
+.main .DAPage footer.buttonsDA .btn-info.disabled:hover {
+  color: #5bc0de;
+}
+.main .DAPage footer.buttonsDA .btn-success {
+  color: #5cb85c;
+}
+.main .DAPage footer.buttonsDA .btn-success:hover {
+  color: #398439;
+}
+.main .DAPage footer.buttonsDA .btn-primary {
+  color: #337ab7;
+}
+.main .DAPage footer.buttonsDA .btn-primary:hover {
+  color: #204d74;
+}
+.main .DAPage footer.buttonsDA .btn-primary.disabled:hover {
+  color: #2e6da4;
+}
+.main .DAPage footer.buttonsDA .btn-danger {
+  color: #d9534f;
+}
+.main .DAPage footer.buttonsDA .btn-danger:hover {
+  color: #ac2925;
+}
+@media (min-width: 768px) {
+  .main .DAPage form .reference .input-group {
+    width: 400px;
+  }
+}
+/**** Echantillon ****/
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .item {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  padding: 0 10px;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .fieldError {
+  display: none;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .options [name$="[remarque]"] {
+  min-height: 100px;
+  height: 100px;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .options .checkbox {
+  height: 45px;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .glyphicon-info-sign {
+  float: right;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch .glyphicon-info-sign:hover {
+  cursor: context-menu;
+}
+.main #updateEchModal .modal-dialog .modal-body #carouselEch textarea {
+  min-width: 100%;
+  max-width: 100%;
+}
+.main #updateEchModal .modal-footer .champs-obligatoires {
+  float: left;
+}
+.main #updateEchModal .modal-footer #echantillonSuivant {
+  background-color: transparent;
+  color: #5bc0de;
+  float: right;
+}
+.main #updateEchModal .modal-footer #echantillonSuivant:hover {
+  color: #269abc;
+}
+.main #updateEchModal .modal-footer #validerEchantillons {
+  display: none;
+  float: right;
+}
+.main .echantillonForm .panel-default {
+  border-color: #999999;
+}
+.main .echantillonForm .panel-default .panel-heading {
+  border-color: #999999;
+  background-color: #77C8D6;
+  height: 40px;
+  padding: 5px 15px;
+}
+.main .echantillonForm .panel-default .panel-heading .panel-title {
+  color: white;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.main .echantillonForm .panel-default .panel-heading .panel-title a {
+  color: white;
+  text-decoration: underline;
+  font-size: 11pt;
+  font-weight: normal;
+}
+.main .echantillonForm .panel-default .panel-heading select {
+  width: 200px;
+  border-color: #999999;
+}
+.main .echantillonForm .panel-default .panel-body .fieldError {
+  display: none;
+}
+.main .echantillonForm .panel-default .panel-body .row:first-of-type {
+  margin-bottom: 20px;
+}
+.main .echantillonForm .panel-default .panel-body .echOptions legend {
+  font-size: 11pt;
+}
+.main .echantillonForm .panel-default .panel-body .echOptions:hover {
+  cursor: context-menu;
+}
+.main .echantillonForm .panel-default .panel-body .options [name$="[remarque]"] {
+  min-height: 100px;
+  height: 100px;
+}
+.main .echantillonForm .panel-default .panel-body .options .checkbox {
+  height: 45px;
+}
+.main .echantillonForm .panel-default .panel-body .glyphicon-info-sign {
+  float: right;
+}
+.main .echantillonForm .panel-default .panel-body .glyphicon-info-sign:hover {
+  cursor: context-menu;
+}
+.main .echantillonForm .panel-default .panel-body textarea {
+  min-width: 100%;
+  max-width: 100%;
+}
+.main .analyseForm .panel-default {
+  border-color: #999999;
+}
+.main .analyseForm .panel-default .panel-heading {
+  border-color: #999999;
+  background-color: #77C8D6;
+  height: 40px;
+  padding: 5px 15px;
+}
+.main .analyseForm .panel-default .panel-heading .panel-title {
+  color: white;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.main .analyseForm .panel-default .panel-heading .panel-title a {
+  color: white;
+  text-decoration: underline;
+  font-size: 11pt;
+  font-weight: normal;
+}
+.main .analyseForm .panel-default .panel-heading select {
+  width: 200px;
+  border-color: #999999;
+}
+.main .analyseForm .panel-default .panel-body .row:first-of-type,
+.main .analyseForm .panel-default .panel-body .row:nth-child(2) {
+  margin-bottom: 20px;
+}
+.main .analyseForm .panel-default .panel-body .dropDownMenuAnalysesForfaits span.label {
+  margin-left: 10px;
+}
+.main .analyseForm .panel-default .panel-body .dropDownMenuAnalysesForfaits li a small {
+  font-style: italic;
+}
+.main .analyseForm .panel-default .panel-body #listeTypesAnalyses ul {
+  padding-left: 20px;
+}
+.main .analyseForm .panel-default .panel-body #listeTypesAnalyses ul li.typeAnalyse {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.main .analyseForm .panel-default .panel-body #listeTypesAnalyses ul li.typeAnalyse:hover {
+  cursor: context-menu;
+}
+.main .analyseForm .panel-default .panel-body #listeTypesAnalyses ul li.typeAnalyse.open {
+  text-decoration: underline;
+}
+.main .analyseForm .panel-default .panel-body #listeForfaitsAnalyses ul {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+.main .analyseForm .panel-default .panel-body #listeForfaitsAnalyses ul li {
+  list-style: none;
+  font-size: 10pt;
+  margin-bottom: 2px;
+}
+.main .analyseForm .panel-default .panel-body #resumeAnalyses {
+  font-size: 9pt;
+}
+.main .analyseForm .panel-default .panel-body #resumeAnalyses .well p .removeAnalyse {
+  margin-left: 5px;
+}
+.main .analyseForm .panel-default .panel-body .analysesSpec textarea {
+  height: 100px;
+}
+.main .analyseForm .panel-default .panel-body textarea {
+  max-width: 100%;
+}
+.main .modeles {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: #F5F5F5;
+}
+.main .modeles div .input-group {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .nbEchantillonsRequest input {
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main footer {
+  margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .main .analyseForm #resumeAnalyses {
+    margin-bottom: 100px;
+  }
+  .main .analyseForm .analysesSpec {
+    position: absolute;
+    left: 66%;
+    width: 32%;
+  }
+}
+@media (min-width: 992px) {
+  .main #updateEchModal .modal-dialog {
+    width: 960px;
+  }
+}
+/**** Destinataires ****/
+.main #gestionDestinataires #remarqueDestinataires {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.main #gestionDestinataires div.row .input-group {
+  width: 90%;
+  float: left;
+}
+.main #gestionDestinataires div.row .glyphicon-info-sign {
+  margin-left: 5px;
+}
+.main #gestionDestinataires div#listeDestinataires {
+  margin-top: 30px;
+}
+.main #gestionDestinataires div#listeDestinataires table thead tr th:nth-child(2) {
+  text-align: left;
+}
+.main #gestionDestinataires div#listeDestinataires table tbody tr td:not(:nth-child(2)) {
+  text-align: center;
+}
+/**** Gestion modèle échantillon ****/
+.main .page-header h1 #nomModeleEchantillon {
+  width: 100px;
+  display: inline-block;
+}
+.main #gestionModeleEch {
+  text-align: left;
+}
+.main #gestionModeleEch #nomModeleEchantillon {
+  width: 400px;
+  margin: 5px auto 30px;
+}
+.main #gestionModeleEch .glyphicon-info-sign {
+  float: right;
+}
+.main #gestionModeleEch textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
+}
+.main #gestionModelesAna .row #nomModeleAnalyses {
+  width: 400px;
+  margin: 5px auto 30px;
+}
+.main #gestionModelesAna .row .row:first-of-type,
+.main #gestionModelesAna .row .row:nth-child(2) {
+  margin-bottom: 20px;
+}
+.main #gestionModelesAna .row .dropDownMenuAnalysesForfaits span.label {
+  margin-left: 10px;
+}
+.main #gestionModelesAna .row .dropDownMenuAnalysesForfaits li a small {
+  font-style: italic;
+}
+.main #gestionModelesAna .row #listeTypesAnalyses ul {
+  padding-left: 20px;
+}
+.main #gestionModelesAna .row #listeTypesAnalyses ul li.typeAnalyse {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.main #gestionModelesAna .row #listeTypesAnalyses ul li.typeAnalyse:hover {
+  cursor: context-menu;
+}
+.main #gestionModelesAna .row #listeTypesAnalyses ul li.typeAnalyse.open {
+  text-decoration: underline;
+}
+.main #gestionModelesAna .row #listeForfaitsAnalyses ul {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+.main #gestionModelesAna .row #listeForfaitsAnalyses ul li {
+  list-style: none;
+  font-size: 10pt;
+  margin-bottom: 2px;
+}
+.main #gestionModelesAna .row #resumeAnalyses {
+  font-size: 9pt;
+}
+.main #gestionModelesAna .row #resumeAnalyses .well p .removeAnalyse {
+  margin-left: 5px;
+}
+.main #gestionModelesAna .row div.analysesSpec textarea {
+  height: 100px;
+}
+.main #gestionModelesAna .row textarea {
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  .main #gestionModelesAna #resumeAnalyses {
+    margin-bottom: 100px;
+  }
+  .main #gestionModelesAna .analysesSpec {
+    position: absolute;
+    left: 66%;
+    width: 32%;
+  }
+}
+/*************************/
+/*       Proforma        */
+/*************************/
+.proforma header {
+  margin-left: 50%;
+}
+.proforma header p {
+  font-size: 10pt;
+  letter-spacing: 1px;
+}
+.proforma header p:first-of-type {
+  margin-bottom: 0;
+}
+.proforma div.title {
+  color: #7F8289;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: Arial;
+}
+.proforma div.title h1 {
+  letter-spacing: 1px;
+  font-size: 23pt;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.proforma div.title h2 {
+  margin-top: 0;
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: italic;
+}
+.proforma div.content p {
+  font-size: 11pt;
+}
+.proforma div.content p label {
+  font-style: italic;
+  color: black;
+}
+.proforma div.content table {
+  margin-top: 20px;
+}
+.proforma div.content table tr#header {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.proforma div.content table tr#header td {
+  vertical-align: top;
+  border: none;
+  font-size: 9pt;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.proforma div.content table tr#header td:first-of-type {
+  text-align: left;
+}
+.proforma div.content table tr#header td.qte {
+  text-align: center;
+}
+.proforma div.content table tr#header td.qte,
+.proforma div.content table tr#header td.montantTotal {
+  width: 130px;
+}
+.proforma div.content table tr#header td.prixU {
+  width: 90px;
+}
+.proforma div.content table tr#header td.montantTotal,
+.proforma div.content table tr#header td.prixU {
+  text-align: right;
+}
+.proforma div.content table tr td {
+  color: black;
+  font-size: 12pt;
+  border: none;
+  text-align: center;
+}
+.proforma div.content table tr td:first-of-type {
+  text-align: left;
+}
+.proforma div.content table tr td.qte {
+  text-align: center;
+}
+.proforma div.content table tr td.montantTotal,
+.proforma div.content table tr td.prixU {
+  text-align: right;
+}
+.proforma div.content table tr td p {
+  font-size: 12pt;
+  margin-bottom: 0;
+}
+.proforma div.content table tr td ul {
+  list-style-type: none;
+}
+.proforma div.content table tr td ul li {
+  font-style: italic;
+  font-size: 11pt;
+}
+.proforma div.content table tr td ul li:before {
+  content: '- ';
+  font-size: 10pt;
+  font-style: normal;
+}
+.proforma div.content table tr#footer {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.proforma div.content table tr#footer td {
+  text-align: right;
+  border: none;
+}
+.proforma div.content table tr#footer td p {
+  font-size: 11pt;
+}
+.proforma div.content table tr#footer td p label {
+  font-style: normal;
+}
+.proforma div.content #remarque {
+  color: red;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+/*************************/
+/*        PDF DA         */
+/*************************/
+.pdfDA header {
+  text-align: center;
+}
+.pdfDA header h1 {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 19pt;
+}
+.pdfDA .content legend {
+  margin-top: 50px;
+  font-style: italic;
+  font-family: Times;
+  font-size: 13pt;
+  border-color: black;
+}
+.pdfDA .content > p {
+  font-family: Times;
+  font-size: 12pt;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+.pdfDA .content > p:first-of-type {
+  font-size: 14pt;
+  margin-bottom: 30px;
+}
+.pdfDA .content table {
+  border-color: black;
+  margin: 30px;
+  width: 95%;
+  border-width: 2px;
+  color: black;
+}
+.pdfDA .content table tr {
+  page-break-inside: avoid;
+}
+.pdfDA .content table thead tr th {
+  background-color: #F5F5F5;
+  border-color: black;
+  border-bottom-width: 1px;
+  font-family: Arial;
+  font-size: 14pt;
+  padding: 4px;
+  font-weight: normal;
+}
+.pdfDA .content table tbody tr td {
+  background-color: #F9F9F9;
+  border-color: black;
+  font-size: 13pt;
+  vertical-align: middle;
+}
+.pdfDA .content table tbody tr td:first-of-type {
+  min-width: 300px;
+}
+.pdfDA .content table tbody tr td:nth-child(2) {
+  text-align: center;
+}
+.footer-distributed {
+  width: 100%;
+  padding: 10px 30px 10px;
+  margin-top: 20px;
+  color: #999;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.footer-distributed .footer-left {
+  text-align: center;
+}
+.footer-distributed .footer-left img {
+  display: none;
+}
+.footer-distributed .footer-center {
+  text-align: center;
+}
+.footer-distributed .footer-center .description {
+  display: none;
+}
+.footer-distributed .footer-right {
+  display: table;
+  margin: 0 auto;
+}
+.footer-distributed .footer-right div .glyphicon {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  margin: 5px 5px;
+  vertical-align: middle;
+}
+.footer-distributed .footer-right div p {
+  display: inline-block;
+  color: #999;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 5px 5px;
+}
+.footer-distributed .footer-right div p span.adresse {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 2;
+}
+.footer-distributed .footer-right div.fax {
+  display: none;
+}
+@media (min-width: 900px) {
+  .footer-distributed {
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 10px 50px 10px;
+    margin-top: 80px;
+    /* Footer left */
+    /* Footer Center */
+    /* Footer Right */
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .footer-distributed .footer-left {
+    width: 33%;
+    text-align: left;
+  }
+  .footer-distributed .footer-left img {
+    display: inline;
+  }
+  .footer-distributed .footer-left .footer-company-name {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px;
+  }
+  .footer-distributed .footer-left .footer-company-name a {
+    color: #999;
+    text-decoration: underline;
+  }
+  .footer-distributed .footer-center {
+    width: 37%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    color: #999;
+    vertical-align: middle;
+    margin-right: 1%;
+  }
+  .footer-distributed .footer-center .footer-links {
+    margin: 20px 0 20px;
+    padding: 0;
+  }
+  .footer-distributed .footer-center .footer-links p {
+    font-size: 14px;
+  }
+  .footer-distributed .footer-center .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    color: inherit;
+    font-weight: bold;
+  }
+  .footer-distributed .footer-center p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .footer-distributed .footer-center p.description {
+    display: block;
+  }
+  .footer-distributed .footer-center p.maj {
+    display: block;
+  }
+  .footer-distributed .footer-right {
+    width: 27%;
+  }
+  .footer-distributed .footer-right div.fax {
+    display: block;
+  }
+}
+@media (min-width: 1150px) {
+  .footer-distributed {
+    /* Footer left */
+    /* Footer Center */
+    /* Footer Right */
+  }
+  .footer-distributed .footer-left {
+    width: 20%;
+  }
+  .footer-distributed .footer-center {
+    width: 59%;
+    margin-right: 0;
+  }
+  .footer-distributed .footer-right {
+    width: 20%;
+  }
+}
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+}
+html {
+  -ms-overflow-style: scrollbar;
+}
+html body #erreur404 .jumbotron {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+html body .checkbox label {
+  font-weight: 700;
+}
+html body.noScroll {
+  overflow: hidden;
+}
+html body label.required:after {
+  content: " *";
+  color: red;
+}
+html body span.required {
+  color: red;
+  font-weight: bold;
+}
+html body .champs-obligatoires {
+  text-align: left;
+  margin-bottom: 20px;
+}
+html body .champs-obligatoires .red-star {
+  color: red;
+}
+html body span.cofrac {
+  font-size: 7pt;
+  vertical-align: 3px;
+}
+html body p.notificationCofrac {
+  font-style: italic;
+  font-size: 10pt;
+}
+html body table thead tr th {
+  text-align: center;
+}
+html body .tooltip {
+  z-index: 3000;
+}
+html body .flashBag .alert-danger {
+  color: #d20d0d;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0px;
+  }
+}
+.logo {
+  padding-left: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .logo {
+    text-align: left;
+  }
+}
+/*
+ * Main content
+ */
+.container-fluid {
+  min-height: 80%;
+}
+.container-fluid .main .page-header {
+  margin-top: 0;
+  text-align: center;
+}
+.container-fluid .main .page-header h1 {
+  margin-top: 10px;
+}
+@media (min-width: 992px) {
+  .container-fluid .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .container-fluid .main .page-header {
+    text-align: left;
+  }
+}
+.footer {
+  padding: 20px 0;
+  margin-top: 10px;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.footer p:last-child {
+  margin-bottom: 0;
+}
