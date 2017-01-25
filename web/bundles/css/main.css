@@ -10,13 +10,12 @@
  */
 
 
-.my_polyline { 
+ .my_polyline { 
  stroke: green;
   fill: none;
   stroke-dasharray: 10,10; 
   stroke-width: 2;
 }
-
 
 
 
