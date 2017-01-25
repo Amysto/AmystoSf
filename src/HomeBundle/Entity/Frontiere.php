@@ -29,6 +29,36 @@ class Frontiere
     private $coordonnees;
 
 
+    /**
+     * @ORM\ManyToOne(targetEntity="HomeBundle\Entity\CustomDate")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $date;
+
+
+    /**
+     * Set date
+     *
+     * @param integer $date
+     * @return CustomDate
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return integer 
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
 
     /**
      * Get idfrontiere
