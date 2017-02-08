@@ -4,6 +4,6 @@ home_homepage:
     options:
         expose: true
 
-map_page:
+home_mappage:
     path: /map
     defaults: { _controller: HomeBundle:Default:map }

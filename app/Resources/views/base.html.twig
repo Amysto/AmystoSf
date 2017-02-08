@@ -11,57 +11,78 @@
   <link rel="icon" type="image/x-icon" href="{{ absolute_url(asset('favicon.ico')) }}" />
 
   <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css')) }}">
-      <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('bundles/css/main.css')) }}">
+  <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('bundles/css/main.css')) }}">
+  <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('bundles/css/pushy.css')) }}">
 
 
   {% block stylesheets %}{% endblock %}
-</head>
-<body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <!-- <a class="navbar-brand" href="#" title=""></a> -->
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Amysto</a>
+          <!-- <a class="navbar-brand" href="#" title=""></a> -->
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li {% if activeSite is defined and activeSite == 'connexion' %}class="active"{% endif %}><a href="#" title="{{ 'Se connecter' }}"><span class="glyphicon glyphicon-log-in"></span>{{ ' Se connecter' }}</a></li>
-          <li {% if activeSite is defined and activeSite == 'su' %}class="active"{% endif %}><a href="#" title="{{ "S'incrire" }}"><span class="glyphicon glyphicon-user"></span>{{ " S'incrire" }}</a></li>
-          {% if app.user and is_granted("ROLE_ADMIN") %}
-            <!-- <li {% if activeSite is defined and activeSite == 'admin' %}class="active"{% endif %}><a href="#" title="Espace Admin">Admin</a></li> -->
-          {% endif %}
-          {% if app.user and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            <li><a href="{{ absolute_url(path('fos_user_security_logout')) }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class='container-fluid'>
-    <div class="row">
-      {% block sidebar %}
-        <div class="col-md-3 col-lg-2 sidebar">
-          {% block sidebar_content %}{% endblock %}
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Amysto</a>
           </div>
-        {% endblock %}
+          <ul class="nav navbar-nav navbar-right">
+            {% if activeSite is defined and activeSite == 'map' %}
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Options <span class="caret"></span></a>
+                <ul class="dropdown-menu" style = "color:blue">
+                  <li><a style = 'color : black !important' id = 'option1'  href="#">Options1</a></li>
+                  <li><a style = 'color : black !important' id = 'option2' href="#">Options2</a></li>
+                  <li><a style = 'color : black !important' id = 'option3' href="#">Options3</a></li>
+                  <li><a style = 'color : black !important' id = 'option4' href="#">Options4</a></li>
+                  <li><a style = 'color : black !important' id = 'option5' href="#">Options5</a></li>
+                  <li><a style = 'color : black !important' id = 'option6' href="#">Options6</a></li>
+                  <li><a style = 'color : black !important' id = 'option7' href="#">Options7</a></li>
+                  <li></li>
 
-        {% block body %}{% endblock %}
+                </ul>
+                {# <li  class="dropdown"><a href="#" title="{{ 'Options' }}"><span class="glyphicon glyphicon-cog"></span>{{ 'Options' }}</a></li>  #}
 
-    </div>
- 
-  {% block content %}{% endblock %}
- </div>
-
-  <script src="{{ absolute_url(asset('bundles/fosjsrouting/js/router.js')) }}"></script>
-  <script src="{{ absolute_url(path('fos_js_routing_js', {"callback": "fos.Router.setData"})) }}"></script>
+              {% endif %}
 
 
-  <script type="text/javascript" src="{{ absolute_url(asset('assets/bower_components/bootstrap/dist/js/bootstrap.min.js')) }}"></script>
+              <li {% if activeSite is defined and activeSite == 'connexion' %}class="active"{% endif %}><a href="#" title="{{ 'Se connecter' }}"><span class="glyphicon glyphicon-log-in"></span>{{ ' Se connecter' }}</a></li>
+              <li {% if activeSite is defined and activeSite == 'su' %}class="active"{% endif %}><a href="#" title="{{ "S'incrire" }}"><span class="glyphicon glyphicon-user"></span>{{ " S'incrire" }}</a></li>
+              {% if app.user and is_granted("ROLE_ADMIN") %}
+                <!-- <li {% if activeSite is defined and activeSite == 'admin' %}class="active"{% endif %}><a href="#" title="Espace Admin">Admin</a></li> -->
+              {% endif %}
+              {% if app.user and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li><a href="{{ absolute_url(path('fos_user_security_logout')) }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class='container-fluid'>
+        <div class="row">
+          {% block sidebar %}
+            <div class="col-md-3 col-lg-2 sidebar">
+              {% block sidebar_content %}{% endblock %}
+              </div>
+            {% endblock %}
+
+            {% block body %}{% endblock %}
+
+            </div>
+
+            {% block content %}{% endblock %}
+            </div>
+
+            <script src="{{ absolute_url(asset('bundles/fosjsrouting/js/router.js')) }}"></script>
+            <script src="{{ absolute_url(path('fos_js_routing_js', {"callback": "fos.Router.setData"})) }}"></script>
 
 
-  {% block javascripts %}{% endblock %}
-</body>
-</html>
+            <script type="text/javascript" src="{{ absolute_url(asset('assets/bower_components/bootstrap/dist/js/bootstrap.min.js')) }}"></script>
+            <script type="text/javascript" src="{{absolute_url(asset('bundles/js/pushy.min.js')) }}"></script>
+
+            {# <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('bundles/css/pushy.css')) }}"> #}
+
+            {% block javascripts %}{% endblock %}
+            </body>
+            </html>
