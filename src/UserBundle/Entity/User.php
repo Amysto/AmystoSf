@@ -1,11 +1,11 @@
 <?php
 
 namespace UserBundle\Entity;
-namespace HomeBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+// use HomeBundle\Entity\Niveaudroits;
 
 /**
  * User
@@ -28,12 +28,11 @@ class User extends BaseUser
     /**
      * @var \Niveaudroits
      *
-     * @ORM\ManyToOne(targetEntity="Niveaudroits")
+     * @ORM\ManyToOne(targetEntity="HomeBundle\Entity\Niveaudroits")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="niveauDroits_idniveauDroits", referencedColumnName="idniveauDroits")
      * })
      */
-
     private $niveaudroits;
 
 
