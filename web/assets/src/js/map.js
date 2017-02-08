@@ -8,6 +8,7 @@ Hydda_Base.addTo(mymap);
 
 
 $(function(){
+	//test border
 	var border = [];
 	var polylineBorder;
 	var canAddBorder = false;
