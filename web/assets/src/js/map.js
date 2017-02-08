@@ -9,6 +9,24 @@ Hydda_Base.addTo(mymap);
 
 $(function(){
 	//test border
+
+
+    function getFrontiere()
+    {
+        var request = $.ajax({
+            type: 'POST',
+            url:  Routing.generate('map_page') ,
+            data: {action : 'getFrontiere'},
+        });
+        request.done(function( data) {
+        polylineBorder = L.polyline(data, { className: 'my_polyline' }).addTo(mymap);   
+
+        });
+    }
+
+
+    setTimeout(function(){ getFrontiere() ;}, 1000);
+
 	var border = [];
 	var polylineBorder;
 	var canAddBorder = false;
