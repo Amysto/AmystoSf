@@ -1,7 +1,6 @@
 <?php
 
 namespace UserBundle\Entity;
-namespace HomeBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -28,12 +27,11 @@ class User extends BaseUser
     /**
      * @var \Niveaudroits
      *
-     * @ORM\ManyToOne(targetEntity="Niveaudroits")
+     * @ORM\ManyToOne(targetEntity="HomeBundle\Entity\Niveaudroits")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="niveauDroits_idniveauDroits", referencedColumnName="idniveauDroits")
      * })
      */
-
     private $niveaudroits;
 
 
@@ -57,7 +55,7 @@ class User extends BaseUser
      * Set niveaudroits
      *
      * @param Niveaudroits $niveaudroits
-     * @return User
+     * @return Niveaudroits
      */
     public function setNiveaudroits(Niveaudroits $niveaudroits = null)
     {
