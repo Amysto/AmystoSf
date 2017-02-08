@@ -5,11 +5,11 @@ namespace HomeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Fait
- *
- * @ORM\Table(name="fait", indexes={@ORM\Index(name="fk_Fait_niveauDroits1_idx", columns={"niveauDroits_idniveauDroits"})})
- * @ORM\Entity
- */
+* Fait
+*
+* @ORM\Table(name="fait")
+* @ORM\Entity
+*/
 class Fait
 {
     /**
@@ -49,15 +49,16 @@ class Fait
      */
     private $idtype;
 
-    /**
-     * @var \Niveaudroits
-     *
-     * @ORM\ManyToOne(targetEntity="Niveaudroits")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="niveauDroits_idniveauDroits", referencedColumnName="idniveauDroits")
-     * })
-     */
-    private $niveaudroits;
+    // /**
+    //  * @var \Niveaudroits
+    //  *
+    //  * @ORM\ManyToOne(targetEntity="Niveaudroits")
+    //  * @ORM\JoinColumns({
+    //  *   @ORM\JoinColumn(name="niveauDroits_idniveauDroits", referencedColumnName="idniveauDroits")
+    //  * })
+    //  */
+     
+    //private $niveaudroits;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -72,6 +73,7 @@ class Fait
      *   }
      * )
      */
+     
     private $domaine;
 
     /**
@@ -223,30 +225,30 @@ class Fait
     public function getIdtype()
     {
         return $this->idtype;
-    }
+    }/*
 
-    /**
-     * Set niveaudroits
-     *
-     * @param Niveaudroits $niveaudroits
-     * @return Fait
-     */
-    public function setNiveaudroits(Niveaudroits $niveaudroits = null)
-    {
-        $this->niveaudroits = $niveaudroits;
+    // /**
+    //  * Set niveaudroits
+    //  *
+    //  * @param Niveaudroits $niveaudroits
+    //  * @return Fait
+    //  */
+    // public function setNiveaudroits(Niveaudroits $niveaudroits = null)
+    // {
+    //     $this->niveaudroits = $niveaudroits;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    /**
-     * Get niveaudroits
-     *
-     * @return Niveaudroits 
-     */
-    public function getNiveaudroits()
-    {
-        return $this->niveaudroits;
-    }
+    // /**
+    //  * Get niveaudroits
+    //  *
+    //  * @return Niveaudroits 
+    //  */
+    // public function getNiveaudroits()
+    // {
+    //     return $this->niveaudroits;
+    // }*/
 
     /**
      * Add domaine
