@@ -8,20 +8,53 @@ Hydda_Base.addTo(mymap);
 
 
 $(function(){
+	var border = [];
+	var polylineBorder;
+	var canAddBorder = false;
+    $('#addBorder').click(function(){
+    	canAddBorder = true;
+    });
+    $('#finishBorder').click(function(){
+    	canAddBorder = false;
+    	polylineBorder = L.polyline(border, { className: 'my_polyline' }).addTo(mymap);
+    });
+    $('#saveBorder').click(function(){
+		var request = $.ajax({
+			type: 'POST',
+			url:  Routing.generate('map_page') ,
+			data: {action : 'saveBorder', border: border},
+		});
+		request.done(function( data) {
+			console.log('success');
+		});
+    });
+
+
 	mymap.on('click', function(e) {
-		console.log("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng);
+		var latitude = e.latlng.lat;
+    	var longitude = e.latlng.lng;
+    	
+    	if(canAddBorder){
+    		var latLngTempTab = [];
+    		latLngTempTab.push(latitude);
+    		latLngTempTab.push(longitude);
+    		border.push(latLngTempTab);
+    		if(border.length>1){
+		    	polylineBorder = L.polyline(border, { className: 'my_polyline' }).addTo(mymap);
+    		}
+    	}
 	});
 
 
 
-var latlngs = [
-    [45.51, -122.68],
-    [37.77, -122.43],
-    [34.04, -118.2]
-];
-var polyline = L.polyline(latlngs, { className: 'my_polyline' }).addTo(mymap);
+// var latlngs = [
+//     [45.51, -122.68],
+//     [37.77, -122.43],
+//     [34.04, -118.2]
+// ];
+// var polyline = L.polyline(latlngs, { className: 'my_polyline' }).addTo(mymap);
 
-mymap.fitBounds(polyline.getBounds());
+//mymap.fitBounds(polyline.getBounds());
 
 
 });

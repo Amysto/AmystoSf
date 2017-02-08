@@ -7,3 +7,5 @@ home_homepage:
 map_page:
     path: /map
     defaults: { _controller: HomeBundle:Default:map }
+    options:
+        expose: true
