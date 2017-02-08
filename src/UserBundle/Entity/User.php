@@ -5,7 +5,6 @@ namespace UserBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-// use HomeBundle\Entity\Niveaudroits;
 
 /**
  * User
@@ -56,7 +55,7 @@ class User extends BaseUser
      * Set niveaudroits
      *
      * @param Niveaudroits $niveaudroits
-     * @return User
+     * @return Niveaudroits
      */
     public function setNiveaudroits(Niveaudroits $niveaudroits = null)
     {
